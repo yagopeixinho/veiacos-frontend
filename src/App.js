@@ -1,23 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "./pages/Home";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/routes";
+import Store from "./contexts/store";
 
 import "./App.css";
-import Login from "./pages/Login";
-import User from "./pages/Users";
-import { AuthProvider } from "./Context/AuthContext";
 
 function App() {
   return (
-    <AuthProvider value={{ authenticated: false }}>
+    <Store>
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/user" element={<User />} />
-        </Routes>
+        <AppRoutes />
       </Router>
-    </AuthProvider>
+    </Store>
   );
 }
 
