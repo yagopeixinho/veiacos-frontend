@@ -3,8 +3,8 @@
    VEIACOS
 ========================================================================== 
 */
-
 /* ------------ Base ------------ */
-@import "base/typography";
-
-@import "pages/login";
+@font-face {
+  font-family: Fredoka One;
+  src: url("../../fonts/FredokaOne/FredokaOne-Regular.ttf");
+} /*# sourceMappingURL=main.css.map */
