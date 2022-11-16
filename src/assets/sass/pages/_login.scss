@@ -1,0 +1,26 @@
+body {
+  background-color: $color-1;
+}
+
+.container-login {
+  display: flex;
+  height: 96vh;
+  justify-content: space-evenly;
+  background-color: $bg-light-1;
+}
+
+.right-login {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.left-login {
+  flex: 1;
+
+  .box-login {
+    background-color: $bg-light;
+    width: 70%;
+    margin: 0 auto;
+  }
+}

@@ -6,7 +6,24 @@
 /* ------------ Abstracts ------------ */
 /*===================== Tipografia =====================*/
 /*===================== Cores =====================*/
-/* ------------ Pages ------------ */
+/* ------------ Components ------------ */
+/*
+===============================================
+ Main input
+===============================================
+*/
+.main-input {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5b7fcc;
+}
+
+/* ------------ Layout ------------ */
 @media (min-width: 1800px) {
   .container-app {
     max-width: 1800px !important;
@@ -39,5 +56,30 @@
   }
 }
 /* ------------ Pages ------------ */
+body {
+  background-color: #982881;
+}
+
+.container-login {
+  display: flex;
+  height: 96vh;
+  justify-content: space-evenly;
+  background-color: #f4f4f4;
+}
+
+.right-login {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.left-login {
+  flex: 1;
+}
+.left-login .box-login {
+  background-color: #ffffff;
+  width: 70%;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=main.css.map */
