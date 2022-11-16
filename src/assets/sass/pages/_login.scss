@@ -4,9 +4,9 @@ body {
 
 .container-login {
   display: flex;
-  height: 96vh;
   justify-content: space-evenly;
   background-color: $bg-light-1;
+  padding: 20px;
 }
 
 .right-login {
@@ -20,7 +20,11 @@ body {
 
   .box-login {
     background-color: $bg-light;
-    width: 70%;
+    height: 100%;
     margin: 0 auto;
+
+    h1 {
+      @include headline-1-sans-serif;
+    }
   }
 }

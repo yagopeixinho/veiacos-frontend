@@ -3,9 +3,152 @@
    VEIACOS
 ========================================================================== 
 */
+@font-face {
+  font-family: Fredoka;
+  src: url("../fonts/Fredoka/Fredoka-Regular.ttf");
+}
 /* ------------ Abstracts ------------ */
 /*===================== Tipografia =====================*/
 /*===================== Cores =====================*/
+/*===================== Headline Sans-Serif =====================*/
+/*===================== Label Sans-serif  =====================*/
+/*===================== Label Sans-serif  =====================*/
+/* ------------ Base ------------ */
+/* 
+==========================================================================
+   RESET VEIACOS STYLE
+========================================================================== 
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* ------------ Components ------------ */
 /*
 ===============================================
@@ -13,14 +156,59 @@
 ===============================================
 */
 .main-input {
-  font-family: "Fredoka";
+  font-family: Fredoka;
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 20px;
   border: none;
   outline: none;
   border-bottom: 1px solid #5b7fcc;
+}
+
+.main-input::placeholder {
+  color: #c5c5c5;
+}
+
+/*
+===============================================
+ Main button
+===============================================
+*/
+.main-button-1 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: #982881;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.main-button-2 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: #632678;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.main-button-3 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: #254589;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* ------------ Layout ------------ */
@@ -62,9 +250,9 @@ body {
 
 .container-login {
   display: flex;
-  height: 96vh;
   justify-content: space-evenly;
   background-color: #f4f4f4;
+  padding: 20px;
 }
 
 .right-login {
@@ -78,8 +266,13 @@ body {
 }
 .left-login .box-login {
   background-color: #ffffff;
-  width: 70%;
+  height: 100%;
   margin: 0 auto;
+}
+.left-login .box-login h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 3.4375em;
+  line-height: 77px;
 }
 
 /*# sourceMappingURL=main.css.map */

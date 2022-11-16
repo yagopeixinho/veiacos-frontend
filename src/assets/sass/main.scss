@@ -4,11 +4,22 @@
 ========================================================================== 
 */
 
+@font-face {
+  font-family: Fredoka;
+  src: url("../fonts/Fredoka/Fredoka-Regular.ttf");
+}
+
 /* ------------ Abstracts ------------ */
 @import "abstracts/variables";
+@import "abstracts/mixins";
+
+/* ------------ Base ------------ */
+@import "base/_reset.scss";
+@import "base/_typography.scss";
 
 /* ------------ Components ------------ */
 @import "components/inputs";
+@import "components/buttons";
 
 /* ------------ Layout ------------ */
 @import "layout/container";

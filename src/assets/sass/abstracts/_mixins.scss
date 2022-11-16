@@ -1,0 +1,68 @@
+/*===================== Headline Sans-Serif =====================*/
+@mixin headline-1-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 3.4375em;
+  line-height: 77px;
+}
+
+@mixin headline-2-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 2.5em;
+  line-height: 56px;
+}
+
+@mixin headline-3-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 2.25em;
+  line-height: 50px;
+}
+
+@mixin headline-4-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1.875em;
+  line-height: 42px;
+}
+
+@mixin headline-5-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1.5em;
+  line-height: 34px;
+}
+
+@mixin headline-6-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1.25em;
+  line-height: 28px;
+}
+
+/*===================== Label Sans-serif  =====================*/
+@mixin body-xlarge-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 2.25em;
+  line-height: 42px;
+}
+
+@mixin body-large-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1.5em;
+  line-height: 30px;
+}
+
+@mixin body-medium-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1.125em;
+  line-height: 24px;
+}
+
+@mixin body-normal-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 1em;
+  line-height: 22px;
+}
+
+/*===================== Label Sans-serif  =====================*/
+@mixin label-normal-sans-serif {
+  font-family: $font-sans-serif;
+  font-size: 0.875em;
+  line-height: 20px;
+}

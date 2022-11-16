@@ -9,9 +9,11 @@ export default function Login() {
 
           <form>
             <input type="text" placeholder="E-mail" className="main-input" />
-            <input type="password" placeholder="Senha" />
 
-            <button>Entrar</button>
+            <br />
+            <input type="password" placeholder="Senha" className="main-input" />
+
+            <button className="main-button-1">Entrar</button>
             <label>
               Não tem uma conta? <span>Registre-se aqui!</span>
             </label>

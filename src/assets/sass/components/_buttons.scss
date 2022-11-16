@@ -1,0 +1,40 @@
+/*
+===============================================
+ Main button
+===============================================
+*/
+.main-button-1 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: $color-1;
+  color: $bg-light;
+  cursor: pointer;
+}
+
+.main-button-2 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: $color-2;
+  color: $bg-light;
+  cursor: pointer;
+}
+
+.main-button-3 {
+  width: 160px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 26px;
+  font-family: Fredoka;
+  background-color: $color-3;
+  color: $bg-light;
+  cursor: pointer;
+}
