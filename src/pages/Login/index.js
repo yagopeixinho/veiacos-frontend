@@ -5,7 +5,7 @@ export default function Login() {
     <div className="container-login">
       <div className="left-login">
         <div className="box-login">
-          <h1>Faça seu login e cobre quem te deve!</h1>
+          <h1 className="login-headline">Faça seu login e cobre quem te deve!</h1>
 
           <form>
             <input type="text" placeholder="E-mail" className="main-input" />
@@ -13,8 +13,11 @@ export default function Login() {
             <br />
             <input type="password" placeholder="Senha" className="main-input" />
 
-            <button className="main-button-1">Entrar</button>
-            <label>
+            <div className="container-button-login">
+              <button className="main-button-1">Entrar</button>
+            </div>
+
+            <label className="label-new-user">
               Não tem uma conta? <span>Registre-se aqui!</span>
             </label>
           </form>

@@ -8,8 +8,9 @@
   src: url("../fonts/Fredoka/Fredoka-Regular.ttf");
 }
 /* ------------ Abstracts ------------ */
-/*===================== Tipografia =====================*/
-/*===================== Cores =====================*/
+/*===================== Typography =====================*/
+/*===================== Colors =====================*/
+/*============= Variants ==============*/
 /*===================== Headline Sans-Serif =====================*/
 /*===================== Label Sans-serif  =====================*/
 /*===================== Label Sans-serif  =====================*/
@@ -250,9 +251,11 @@ body {
 
 .container-login {
   display: flex;
+  margin: 2.5%;
   justify-content: space-evenly;
   background-color: #f4f4f4;
   padding: 20px;
+  height: 80vh;
 }
 
 .right-login {
@@ -268,6 +271,40 @@ body {
   background-color: #ffffff;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.left-login .box-login .login-headline {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5em;
+  line-height: 34px;
+  width: 390px;
+  text-align: center;
+  margin: 0 auto;
+}
+.left-login .box-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 390px;
+  text-align: center;
+  margin: 0 auto;
+}
+.left-login .box-login form .container-button-login {
+  margin: 30px;
+}
+.left-login .box-login form .label-new-user {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1em;
+  line-height: 22px;
+}
+.left-login .box-login form .label-new-user span {
+  color: #58ade2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 .left-login .box-login h1 {
   font-family: "Fredoka", sans-serif;

@@ -4,9 +4,11 @@ body {
 
 .container-login {
   display: flex;
+  margin: 2.5%;
   justify-content: space-evenly;
   background-color: $bg-light-1;
   padding: 20px;
+  height: 80vh;
 }
 
 .right-login {
@@ -22,6 +24,41 @@ body {
     background-color: $bg-light;
     height: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    .login-headline {
+      @include headline-5-sans-serif;
+      width: 390px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 390px;
+      text-align: center;
+      margin: 0 auto;
+
+      .container-button-login {
+        margin: 30px;
+      }
+
+      .label-new-user {
+        @include body-normal-sans-serif;
+
+        span {
+          color: $color-4-light;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: $font-size-h6;
+        }
+      }
+    }
 
     h1 {
       @include headline-1-sans-serif;
