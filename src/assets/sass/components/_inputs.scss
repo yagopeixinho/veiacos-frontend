@@ -16,3 +16,7 @@
 .main-input::placeholder {
   color: $bg-gray;
 }
+.main-input:focus {
+  transition: 1s ease-in;
+  border-bottom: 1px solid $color-2-light;
+}

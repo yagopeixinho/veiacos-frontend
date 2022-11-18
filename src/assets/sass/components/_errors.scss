@@ -1,0 +1,25 @@
+/*
+===============================================
+ Error input message/required
+===============================================
+*/
+.input-error-message {
+  font-family: Fredoka, sans-serif;
+  font-size: $font-size-h6;
+  text-align: left;
+
+  animation-name: inputErrorMessageShow;
+  animation-duration: 1s;
+}
+
+@keyframes inputErrorMessageShow {
+  0% {
+    opacity: 0%;
+    margin-left: -4%;
+  }
+
+  100% {
+    opacity: 100%;
+    margin-left: unset;
+  }
+}
