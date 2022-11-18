@@ -227,7 +227,7 @@ table {
   font-size: 0.9em;
   text-align: left;
   animation-name: inputErrorMessageShow;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 @keyframes inputErrorMessageShow {

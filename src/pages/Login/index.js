@@ -1,15 +1,33 @@
 import { Form, Formik } from "formik";
+import { useContext } from "react";
+
+import { useNavigate } from "react-router-dom";
 import logoExtraBig from "../../assets/images/logos/logo-extra-big.svg";
 import MainButton from "../../components/buttons/MainButton";
 import InputTextForm from "../../components/inputs/InputTextForm";
-
-import * as Yup from "yup";
+import { AppContext } from "../../contexts/store";
+import AuthenticationService from "../../service/authentication.service";
+import { loginValidation } from "../../validations/login.validation";
 
 export default function Login() {
-  const validation = Yup.object().shape({
-    email: Yup.string().required("Esse campo é obrigatório"),
-    password: Yup.string().required("obrigatorio"),
-  });
+  const { setStore } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  async function loginIn(values) {
+    const _authenticationService = new AuthenticationService();
+
+    await _authenticationService
+      .authUser(values)
+      .then((res) => {
+        debugger;
+        setStore({ user: {} ,isAuthenticated: true });
+        navigate("/home");
+      })
+      .catch((err) => {
+        debugger;
+        console.log(err);
+      });
+  }
 
   return (
     <div className="container-login">
@@ -20,11 +38,10 @@ export default function Login() {
           </h1>
 
           <Formik
-            validationSchema={validation}
+            validationSchema={loginValidation}
             initialValues={{ email: "", password: "" }}
             onSubmit={(ev) => {
-              alert("submit");
-              debugger;
+              loginIn(ev);
             }}
           >
             {(props) => (
@@ -37,6 +54,7 @@ export default function Login() {
                 />
 
                 <br />
+
                 <InputTextForm
                   type="password"
                   name="password"
