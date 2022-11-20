@@ -239,7 +239,27 @@ table {
     opacity: 100%;
     margin-left: unset;
   }
-} /* ------------ Layout ------------ */
+}
+.error-message {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.875em;
+  line-height: 42px;
+  font-size: 18px;
+  animation-name: errorMessage;
+  animation-duration: 0.5s;
+}
+
+@keyframes errorMessage {
+  0% {
+    opacity: 0%;
+    margin-left: -4%;
+  }
+  100% {
+    opacity: 100%;
+    margin-left: unset;
+  }
+}
+/* ------------ Layout ------------ */
 @media (min-width: 1800px) {
   .container-app {
     max-width: 1800px !important;

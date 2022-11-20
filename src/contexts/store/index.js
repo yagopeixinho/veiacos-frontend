@@ -35,7 +35,6 @@ export default function Store({ children }) {
       value={{
         store,
         setStore: (ev) => {
-          debugger;
           setStore(ev);
         },
       }}

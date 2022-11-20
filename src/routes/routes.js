@@ -8,9 +8,6 @@ import Login from "../pages/Login";
 function PrivateRoute({ children, redirectTo }) {
   const { store } = useContext(AppContext);
   const { isAuthenticated } = store;
-  debugger;
-
-  console.log(children);
 
   return isAuthenticated ? children : <Navigate to={redirectTo} />;
 }

@@ -1,8 +1,8 @@
 import { Form, Formik } from "formik";
-import { useContext } from "react";
-
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logoExtraBig from "../../assets/images/logos/logo-extra-big.svg";
+import AlertMessage from "../../components/AlertMessage";
 import MainButton from "../../components/buttons/MainButton";
 import InputTextForm from "../../components/inputs/InputTextForm";
 import { AppContext } from "../../contexts/store";
@@ -12,6 +12,7 @@ import { loginValidation } from "../../validations/login.validation";
 export default function Login() {
   const { setStore } = useContext(AppContext);
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function loginIn(values) {
     const _authenticationService = new AuthenticationService();
@@ -19,13 +20,11 @@ export default function Login() {
     await _authenticationService
       .authUser(values)
       .then((res) => {
-        debugger;
-        setStore({ user: {} ,isAuthenticated: true });
+        setStore({ user: res.data.user, isAuthenticated: true });
         navigate("/home");
       })
       .catch((err) => {
-        debugger;
-        console.log(err);
+        setErrorMessage(err?.response?.data?.message);
       });
   }
 
@@ -69,6 +68,8 @@ export default function Login() {
                     type="Submit"
                   />
                 </div>
+
+                <AlertMessage errorMessage={errorMessage} />
 
                 <label className="label-new-user">
                   Não tem uma conta? <span>Registre-se aqui!</span>

@@ -1,0 +1,18 @@
+.error-message {
+  @include headline-4-sans-serif;
+  font-size: $font-size-medium;
+
+  animation-name: errorMessage;
+  animation-duration: 0.5s;
+}
+@keyframes errorMessage {
+  0% {
+    opacity: 0%;
+    margin-left: -4%;
+  }
+
+  100% {
+    opacity: 100%;
+    margin-left: unset;
+  }
+}
