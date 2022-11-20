@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { api } from "../../service/api.service";
+import jwt_decode from "jwt-decode";
 
 const initialContext = {
   user: {},
@@ -17,9 +18,13 @@ export default function Store({ children }) {
 
     if (token) {
       api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`;
+      const decodedToken = jwt_decode(token);
+
+      debugger;
       setStore((previousState) => ({
         ...previousState,
         isAuthenticated: true,
+        user: decodedToken,
       }));
     }
 
