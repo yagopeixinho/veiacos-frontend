@@ -267,11 +267,24 @@ table {
   background-color: #982881;
   box-shadow: 0px 0 10px 4px #892774;
   padding: 7px 10px;
+  font-family: Fredoka;
 }
 .header .nav-header {
   display: flex;
   align-items: center;
   gap: 90px;
+}
+.header .nav-header .nav-link {
+  color: #000000;
+  text-decoration: none;
+}
+.header .nav-header .nav-link img {
+  width: 18px;
+}
+.header .nav-header .nav-link li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .header .user-info {
   display: flex;
@@ -282,9 +295,11 @@ table {
 .header .user-info .box-user-image {
   width: 40px;
   height: 40px;
-  background-color: red;
+  background-color: rgb(65, 60, 60);
   border-radius: 50%;
-} /* ------------ Layout ------------ */
+}
+
+/* ------------ Layout ------------ */
 @media (min-width: 1800px) {
   .container-app {
     max-width: 1800px !important;
