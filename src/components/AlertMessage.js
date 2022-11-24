@@ -1,8 +1,8 @@
-export default function AlertMessage({ errorMessage }) {
+export default function AlertMessage({ message }) {
   return (
-    errorMessage && (
+    message && (
       <div>
-        <h4 className="error-message">{errorMessage}</h4>
+        <h4 className="error-message">{message}</h4>
       </div>
     )
   );

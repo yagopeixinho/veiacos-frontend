@@ -18,7 +18,7 @@ export default function AppRoutes() {
       {/****
        * Public Routes
        ****/}
-      <Route exact path="/entrar" element={<Login />} />
+      <Route exact path="/" element={<Login />} />
 
       {/****
        * Private Routes

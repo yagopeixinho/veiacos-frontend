@@ -5,3 +5,10 @@ export const api = axios.create({
   "Content-Type": "application/json",
   Accept: "application/json",
 });
+
+export default class CoreApiService {
+  constructor(_parentEndPoint, _endPoint) {
+    this.parentEndPoint = _parentEndPoint;
+    this.endPoint = _endPoint;
+  }
+}

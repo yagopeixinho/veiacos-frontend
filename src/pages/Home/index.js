@@ -1,8 +1,26 @@
-import { useContext } from "react";
-import { AppContext } from "../../contexts/store";
+import VeiacosTable from "../../components/VeiacosTable";
 
 export default function Home() {
-  const { store } = useContext(AppContext);
 
-  return <h1></h1>;
+  return (
+    <div className="home">
+      <div className="ranking"></div>
+      <div className="dashboard">
+        <h1>Dashboard</h1>
+
+        <div>
+          <button>Botão 1</button>
+          <button>Botão 1</button>
+          <button>Botão 1</button>
+          <button>Botão 1</button>
+        </div>
+
+        <div>
+          <h2>Mais novos veiacos!</h2>
+        </div>
+
+        <VeiacosTable />
+      </div>
+    </div>
+  );
 }

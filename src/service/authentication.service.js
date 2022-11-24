@@ -1,12 +1,15 @@
-import { api } from "./api.service";
+import CoreApiService, { api } from "./api.service";
 
 import jwt_decode from "jwt-decode";
 
-export default class AuthenticationService {
-  async authUser(values) {
-    const response = await api.post("/users/auth", values);
+export default class AuthenticationService extends CoreApiService {
+  constructor() {
+    super(undefined, "auth");
+  }
 
-    debugger;
+  async authUser(values) {
+    const response = await api.post(`/users/${this.endPoint}`, values);
+
     localStorage.setItem("token", JSON.stringify(response.data.token));
     api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
 

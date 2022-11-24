@@ -20,7 +20,6 @@ export default function Store({ children }) {
       api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`;
       const decodedToken = jwt_decode(token);
 
-      debugger;
       setStore((previousState) => ({
         ...previousState,
         isAuthenticated: true,

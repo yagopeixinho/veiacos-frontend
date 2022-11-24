@@ -7,12 +7,15 @@ import MainButton from "../../components/buttons/MainButton";
 import InputTextForm from "../../components/inputs/InputTextForm";
 import { AppContext } from "../../contexts/store";
 import AuthenticationService from "../../service/authentication.service";
+import { UserService } from "../../service/user.service";
 import { loginValidation } from "../../validations/login.validation";
+import { registerValidation } from "../../validations/register.validation";
 
 export default function Login() {
   const { setStore } = useContext(AppContext);
   const navigate = useNavigate();
-  const [errorMessage, setErrorMessage] = useState("");
+  const [message, setMessage] = useState("");
+  const [action, setAction] = useState("login");
 
   async function loginIn(values) {
     const _authenticationService = new AuthenticationService();
@@ -24,60 +27,161 @@ export default function Login() {
         navigate("/home");
       })
       .catch((err) => {
-        setErrorMessage(err?.response?.data?.message);
+        setMessage(err?.response?.data?.message);
+      });
+  }
+
+  async function registerUser(values) {
+    const _userService = new UserService();
+
+    await _userService
+      .createUser(values)
+      .then(() => {
+        setAction("login");
+        setMessage("O seu usuário foi criado com sucesso!");
+      })
+      .catch((err) => {
+        setMessage(err?.response?.data?.message);
       });
   }
 
   return (
     <div className="container-login">
       <div className="left-login">
-        <div className="box-login">
-          <h1 className="login-headline">
-            Faça seu login e cobre quem te deve!
-          </h1>
+        {action === "login" ? (
+          <div className="box-login">
+            <h1 className="login-headline">
+              Faça seu login e cobre quem te deve!
+            </h1>
 
-          <Formik
-            validationSchema={loginValidation}
-            initialValues={{ email: "", password: "" }}
-            onSubmit={(ev) => {
-              loginIn(ev);
-            }}
-          >
-            {(props) => (
-              <Form>
-                <InputTextForm
-                  type="text"
-                  name="email"
-                  placeholder="E-mail"
-                  className="main-input"
-                />
-
-                <br />
-
-                <InputTextForm
-                  type="password"
-                  name="password"
-                  placeholder="Senha"
-                  className="main-input"
-                />
-
-                <div className="container-button-login">
-                  <MainButton
-                    className="main-button-1"
-                    text="Enviar"
-                    type="Submit"
+            <Formik
+              validationSchema={loginValidation}
+              initialValues={{ email: "", password: "" }}
+              onSubmit={(values) => {
+                loginIn(values);
+              }}
+            >
+              {(props) => (
+                <Form>
+                  <InputTextForm
+                    type="text"
+                    name="email"
+                    placeholder="E-mail"
+                    className="main-input"
                   />
-                </div>
 
-                <AlertMessage errorMessage={errorMessage} />
+                  <br />
 
-                <label className="label-new-user">
-                  Não tem uma conta? <span>Registre-se aqui!</span>
-                </label>
-              </Form>
-            )}
-          </Formik>
-        </div>
+                  <InputTextForm
+                    type="password"
+                    name="password"
+                    placeholder="Senha"
+                    className="main-input"
+                  />
+
+                  <div className="container-button-login">
+                    <MainButton
+                      className="main-button-1"
+                      text="Acessar"
+                      type="Submit"
+                    />
+                  </div>
+
+                  <AlertMessage message={message} />
+
+                  <label className="label-new-user">
+                    Não tem uma conta?{" "}
+                    <span
+                      onClick={() => {
+                        setAction("register");
+                      }}
+                    >
+                      Registre-se aqui!
+                    </span>
+                  </label>
+                </Form>
+              )}
+            </Formik>
+          </div>
+        ) : (
+          <div className="box-login">
+            <h1 className="login-headline">
+              Registre-se e cobre quem te deve!
+            </h1>
+
+            <Formik
+              validationSchema={registerValidation}
+              initialValues={{
+                email: "",
+                name: "",
+                password: "",
+                confirmPassword: "",
+              }}
+              onSubmit={(values) => {
+                registerUser(values);
+              }}
+            >
+              {() => (
+                <Form>
+                  <InputTextForm
+                    type="text"
+                    name="email"
+                    placeholder="E-mail"
+                    className="main-input"
+                  />
+
+                  <br />
+
+                  <InputTextForm
+                    type="text"
+                    name="name"
+                    placeholder="Nome"
+                    className="main-input"
+                  />
+
+                  <br />
+
+                  <InputTextForm
+                    type="password"
+                    name="password"
+                    placeholder="Senha"
+                    className="main-input"
+                  />
+
+                  <br />
+
+                  <InputTextForm
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirme a senha"
+                    className="main-input"
+                  />
+
+                  <div className="container-button-login">
+                    <MainButton
+                      className="main-button-1"
+                      text="Registrar"
+                      type="Submit"
+                    />
+                  </div>
+
+                  <AlertMessage message={message} />
+
+                  <label className="label-new-user">
+                    Já tenho acesso!{" "}
+                    <span
+                      onClick={() => {
+                        setAction("login");
+                      }}
+                    >
+                      Voltar e fazer login
+                    </span>
+                  </label>
+                </Form>
+              )}
+            </Formik>
+          </div>
+        )}
       </div>
       <div className="right-login">
         <img src={logoExtraBig} alt="Logo do APP" />
