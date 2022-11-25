@@ -5,9 +5,17 @@ export class UserService extends CoreApiService {
     super(undefined, "users");
   }
 
-  async createUser(values) {
-    const response = await api.post(`/${this.endPoint}`, values);
+  async createUser(data) {
+    const response = await api.post(`/${this.endPoint}`, data);
 
     return response.data;
+  }
+
+  async getUserVeiacos(id) {
+    this.parentEndPoint = "veiacos";
+
+    const response = await api.get(`/${this.endPoint}/${this.parentEndPoint}`);
+
+    return response.data[0];
   }
 }
