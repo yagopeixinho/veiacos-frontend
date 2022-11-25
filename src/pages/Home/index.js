@@ -1,25 +1,27 @@
 import VeiacosTable from "../../components/VeiacosTable";
 
 export default function Home() {
-
   return (
-    <div className="home">
-      <div className="ranking"></div>
-      <div className="dashboard">
-        <h1>Dashboard</h1>
-
-        <div>
-          <button>Botão 1</button>
-          <button>Botão 1</button>
-          <button>Botão 1</button>
-          <button>Botão 1</button>
+    <div className="container-app">
+      <div className="home">
+        <div className="ranking">
+          <div className="left-content"></div>
         </div>
 
-        <div>
-          <h2>Mais novos veiacos!</h2>
-        </div>
+        <div className="dashboard">
+          <div>
+            <h1>Dashboard</h1>
+          </div>
 
-        <VeiacosTable />
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <div>
+            <VeiacosTable />
+          </div>
+        </div>
       </div>
     </div>
   );

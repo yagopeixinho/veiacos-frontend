@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+
+  .nav {
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .nav-link {
+    color: rgba(190, 190, 190, 0.521);
+    text-decoration: none;
+
+    font-size: $font-size-medium !important;
+    @include label-normal-sans-serif;
+  }
+  .nav-link-active {
+    color: $color-1;
+    font-size: $font-size-medium !important;
+    text-decoration: none;
+
+    @include label-normal-sans-serif;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .username {
+      @include label-normal-sans-serif;
+    }
+    .box-user-image {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
+    }
+  }
+}
