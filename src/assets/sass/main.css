@@ -265,6 +265,9 @@ table {
   align-items: center;
   padding: 30px 70px;
 }
+.header .logo-app {
+  cursor: pointer;
+}
 .header .nav ul {
   display: flex;
   gap: 20px;
@@ -302,6 +305,15 @@ table {
   background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
 }
 
+.veiacos-table-header {
+  margin-bottom: 24px;
+}
+.veiacos-table-header .table-headline {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.25em;
+  line-height: 28px;
+}
+
 .veiacos-table {
   text-align: center;
 }
@@ -312,18 +324,18 @@ table {
   line-height: 22px;
 }
 .veiacos-table tr td {
-  width: 200px;
-  font-size: 20px;
-  padding: 20px 0;
+  width: 240px;
+  font-size: 16px;
+  padding: 34px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.062);
   cursor: pointer;
 }
 .veiacos-table th {
-  color: rgba(190, 190, 190, 0.521);
+  color: rgba(0, 0, 0, 0.521);
 }
 .veiacos-table .veiaco-picture {
   background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
-  padding: 3px 15px;
+  padding: 5px 15px;
   border-radius: 20px;
   margin-right: 6px;
 }
@@ -440,7 +452,7 @@ body {
 .home .ranking {
   width: 100%;
   height: 60%;
-  flex: 0.6;
+  flex: 0.8;
 }
 .home .ranking .left-content {
   max-width: 400px;
@@ -451,7 +463,7 @@ body {
 }
 .home .dashboard {
   width: 100%;
-  flex: 1.5;
+  flex: 1;
 }
 .home .dashboard h1 {
   font-family: "Fredoka", sans-serif;

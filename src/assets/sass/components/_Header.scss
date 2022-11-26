@@ -4,6 +4,10 @@
   align-items: center;
   padding: 30px 70px;
 
+  .logo-app {
+    cursor: pointer;
+  }
+
   .nav {
     ul {
       display: flex;

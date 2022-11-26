@@ -19,7 +19,7 @@ export default function Home() {
           <br></br>
           <br></br>
           <div>
-            <VeiacosTable />
+            <VeiacosTable quantidadeVeiacos={4} />
           </div>
         </div>
       </div>

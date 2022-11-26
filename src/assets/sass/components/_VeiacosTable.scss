@@ -1,3 +1,11 @@
+.veiacos-table-header {
+  margin-bottom: 24px;
+
+  .table-headline {
+    @include headline-6-sans-serif;
+  }
+}
+
 .veiacos-table {
   text-align: center;
 
@@ -6,21 +14,21 @@
     @include body-normal-sans-serif;
 
     td {
-      width: 200px;
-      font-size: 20px;
-      padding: 20px 0;
+      width: 240px;
+      font-size: 16px;
+      padding: 34px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.062);
       cursor: pointer;
     }
   }
 
   th {
-    color: rgba(190, 190, 190, 0.521);
+    color: rgba(0, 0, 0, 0.521);
   }
 
   .veiaco-picture {
     background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
-    padding: 3px 15px;
+    padding: 5px 15px;
     border-radius: 20px;
     margin-right: 6px;
   }

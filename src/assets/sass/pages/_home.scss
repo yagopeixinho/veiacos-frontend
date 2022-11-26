@@ -10,7 +10,7 @@ body {
   .ranking {
     width: 100%;
     height: 60%;
-    flex: 0.6;
+    flex: 0.8;
 
     .left-content {
       max-width: 400px;
@@ -23,7 +23,7 @@ body {
 
   .dashboard {
     width: 100%;
-    flex: 1.5;
+    flex: 1;
 
     h1 {
       @include headline-1-sans-serif;
