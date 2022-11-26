@@ -1,0 +1,19 @@
+.box-dashboard {
+  background-color: red;
+  display: flex;
+  gap: 6px;
+  width: 170px;
+  margin-bottom: 40px;
+  border-radius: 36px;
+  padding: 16px 24px;
+
+  .box-title {
+    @include headline-6-sans-serif;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-value {
+    @include headline-5-sans-serif;
+  }
+}
