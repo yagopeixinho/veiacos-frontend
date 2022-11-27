@@ -305,90 +305,6 @@ table {
   background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
 }
 
-.veiacos-table-header {
-  margin-bottom: 24px;
-}
-.veiacos-table-header .table-headline {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.25em;
-  line-height: 28px;
-}
-
-.veiacos-table {
-  text-align: center;
-  margin: 30px 0;
-}
-.veiacos-table tr {
-  text-align: left;
-  font-family: "Fredoka", sans-serif;
-  font-size: 1em;
-  line-height: 22px;
-}
-.veiacos-table tr td {
-  width: 240px;
-  font-size: 16px;
-  padding: 34px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.062);
-  cursor: pointer;
-}
-.veiacos-table th {
-  color: rgba(0, 0, 0, 0.521);
-}
-.veiacos-table .veiaco-picture {
-  background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
-  padding: 5px 15px;
-  border-radius: 20px;
-  margin-right: 6px;
-}
-
-.veiacos-table-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.veiacos-table-footer .show-items {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1em;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 0.521);
-}
-.veiacos-table-footer .see-all-veiacos {
-  display: flex;
-  font-family: "Fredoka", sans-serif;
-  font-size: 1em;
-  line-height: 22px;
-  gap: 8px;
-  color: #982881;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.dash-status {
-  display: flex;
-  justify-content: space-between;
-}
-.dash-status .box-dashboard {
-  background-color: red;
-  display: flex;
-  gap: 6px;
-  width: 170px;
-  margin-bottom: 40px;
-  border-radius: 36px;
-  padding: 16px 24px;
-}
-.dash-status .box-dashboard .box-title {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.25em;
-  line-height: 28px;
-  flex-direction: column;
-  align-items: center;
-}
-.dash-status .box-dashboard .box-value {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.5em;
-  line-height: 34px;
-}
-
 /* ------------ Layout ------------ */
 @media (min-width: 1800px) {
   .container-app {
@@ -518,6 +434,13 @@ body {
   font-family: "Fredoka", sans-serif;
   font-size: 3.4375em;
   line-height: 77px;
+}
+
+.veiacos-page {
+  margin: 0 auto;
+}
+.veiacos-page .veiacos-table {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

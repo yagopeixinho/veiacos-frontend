@@ -23,8 +23,6 @@
 @import "components/errors";
 @import "components/AlertMessage";
 @import "components/Header";
-@import "components/VeiacosTable";
-@import "components/DashboardStatus";
 
 /* ------------ Layout ------------ */
 @import "layout/container";
@@ -32,3 +30,4 @@
 /* ------------ Pages ------------ */
 @import "pages/login";
 @import "pages/home";
+@import "pages/veiacos";

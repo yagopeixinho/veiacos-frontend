@@ -4,6 +4,7 @@ import { AppContext } from "../contexts/store";
 
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import Veiacos from "../pages/Veiacos";
 
 function PrivateRoute({ children, redirectTo }) {
   const { store } = useContext(AppContext);
@@ -29,8 +30,18 @@ export default function AppRoutes() {
         exact
         path="/home"
         element={
-          <PrivateRoute redirectTo="/entrar">
+          <PrivateRoute redirectTo="/">
             <Home />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        exact
+        path="/veiacos"
+        element={
+          <PrivateRoute redirectTo="/">
+            <Veiacos />
           </PrivateRoute>
         }
       />
