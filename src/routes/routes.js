@@ -9,6 +9,8 @@ function PrivateRoute({ children, redirectTo }) {
   const { store } = useContext(AppContext);
   const { isAuthenticated } = store;
 
+  debugger;
+
   return isAuthenticated ? children : <Navigate to={redirectTo} />;
 }
 

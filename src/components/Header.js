@@ -9,7 +9,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   // Check locations where the Header can apper
-  if (pathname === "/entrar") {
+  if (pathname === "/") {
     return;
   }
 
@@ -47,7 +47,7 @@ export default function Header() {
       </nav>
       <div className="user-info">
         <div>
-          <label className="username">{store.user.user.name}</label>
+          <label className="username">{store.user?.user?.name}</label>
         </div>
         <div className="box-user-image" />
       </div>

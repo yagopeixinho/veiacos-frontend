@@ -340,7 +340,11 @@ table {
   margin-right: 6px;
 }
 
-.box-dashboard {
+.dash-status {
+  display: flex;
+  justify-content: space-between;
+}
+.dash-status .box-dashboard {
   background-color: red;
   display: flex;
   gap: 6px;
@@ -349,14 +353,14 @@ table {
   border-radius: 36px;
   padding: 16px 24px;
 }
-.box-dashboard .box-title {
+.dash-status .box-dashboard .box-title {
   font-family: "Fredoka", sans-serif;
   font-size: 1.25em;
   line-height: 28px;
   flex-direction: column;
   align-items: center;
 }
-.box-dashboard .box-value {
+.dash-status .box-dashboard .box-value {
   font-family: "Fredoka", sans-serif;
   font-size: 1.5em;
   line-height: 34px;
