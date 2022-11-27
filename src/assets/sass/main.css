@@ -316,6 +316,7 @@ table {
 
 .veiacos-table {
   text-align: center;
+  margin: 30px 0;
 }
 .veiacos-table tr {
   text-align: left;
@@ -338,6 +339,28 @@ table {
   padding: 5px 15px;
   border-radius: 20px;
   margin-right: 6px;
+}
+
+.veiacos-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.veiacos-table-footer .show-items {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1em;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.521);
+}
+.veiacos-table-footer .see-all-veiacos {
+  display: flex;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1em;
+  line-height: 22px;
+  gap: 8px;
+  color: #982881;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .dash-status {
@@ -472,7 +495,7 @@ body {
 
 .home {
   display: flex;
-  padding: 56px;
+  padding: 16px 56px;
   height: 100vh;
 }
 .home .ranking {

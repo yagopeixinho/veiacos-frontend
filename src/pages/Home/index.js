@@ -1,4 +1,3 @@
-import DashboardStatus from "../../components/DashboardStatus";
 import VeiacosTable from "../../components/VeiacosTable";
 
 export default function Home() {
@@ -14,10 +13,10 @@ export default function Home() {
             <h1>Dashboard</h1>
           </div>
 
-          <div>
-            <DashboardStatus />
-          </div>
-
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <div>
             <VeiacosTable quantidadeVeiacos={4} />
           </div>
