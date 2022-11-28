@@ -454,10 +454,16 @@ body {
   color: rgba(0, 0, 0, 0.26);
   text-align: left;
 }
+.veiacos-page .veiacos-table thead tr .actions-th {
+  text-align: right;
+}
 .veiacos-page .veiacos-table tbody tr {
   font-family: "Fredoka", sans-serif;
   font-size: 1em;
   line-height: 22px;
+}
+.veiacos-page .veiacos-table tbody tr .actions-td {
+  text-align: right;
 }
 .veiacos-page .veiacos-table tbody tr td {
   width: 240px;

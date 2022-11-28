@@ -33,7 +33,7 @@ export default function Veiacos() {
               <th>Status</th>
               <th>Data</th>
               <th>Telefone</th>
-              <th>Ações</th>
+              <th className="actions-th">Ações</th>
             </tr>
           </thead>
 
@@ -49,7 +49,7 @@ export default function Veiacos() {
                   {new Date(veiaco.created_at).toLocaleDateString("pt-BR")}
                 </td>
                 <td>{veiaco.phone}</td>
-                <td>
+                <td className="actions-td">
                   <span>
                     <img
                       src={pencilIcon}
