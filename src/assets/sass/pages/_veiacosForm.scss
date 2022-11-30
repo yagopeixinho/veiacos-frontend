@@ -1,0 +1,37 @@
+.veiacos-form {
+  display: flex;
+
+  .veiacos-form-left {
+    display: flex;
+    flex: 0.6;
+    border-right: 1px solid $bg-gray-light;
+    justify-content: center;
+    padding: 20px;
+
+    .user-picture {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: url("https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png")
+        no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .veiacos-form-right {
+    flex: 1;
+    padding: 0 20px;
+
+    .headline-container {
+      padding: 20px 0;
+      .headline-veiacos-form {
+        @include headline-2-sans-serif;
+      }
+    }
+
+    .form-veiaco {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

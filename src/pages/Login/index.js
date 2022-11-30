@@ -67,7 +67,7 @@ export default function Login() {
                     type="text"
                     name="email"
                     placeholder="E-mail"
-                    className="main-input"
+                    classes="main-input"
                   />
 
                   <br />
@@ -76,7 +76,7 @@ export default function Login() {
                     type="password"
                     name="password"
                     placeholder="Senha"
-                    className="main-input"
+                    classes="main-input"
                   />
 
                   <div className="container-button-login">

@@ -165,6 +165,7 @@ table {
   border: none;
   outline: none;
   border-bottom: 1px solid #5b7fcc;
+  margin-bottom: 4px;
 }
 
 .main-input::placeholder {
@@ -477,6 +478,39 @@ body {
   padding: 5px 15px;
   border-radius: 20px;
   margin-right: 6px;
+}
+.veiacos-form {
+  display: flex;
+}
+.veiacos-form .veiacos-form-left {
+  display: flex;
+  flex: 0.6;
+  border-right: 1px solid #e1e1e1;
+  justify-content: center;
+  padding: 20px;
+}
+.veiacos-form .veiacos-form-left .user-picture {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: url("https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png") no-repeat;
+  background-size: 100% 100%;
+}
+.veiacos-form .veiacos-form-right {
+  flex: 1;
+  padding: 0 20px;
+}
+.veiacos-form .veiacos-form-right .headline-container {
+  padding: 20px 0;
+}
+.veiacos-form .veiacos-form-right .headline-container .headline-veiacos-form {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.5em;
+  line-height: 56px;
+}
+.veiacos-form .veiacos-form-right .form-veiaco {
+  display: flex;
+  gap: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
