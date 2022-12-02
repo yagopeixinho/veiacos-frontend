@@ -1,6 +1,6 @@
 import { Form, Formik } from "formik";
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AlertMessage from "../../../components/AlertMessage";
 import MainButton from "../../../components/buttons/MainButton";
 import InputTextForm from "../../../components/inputs/InputTextForm";
@@ -11,8 +11,10 @@ import { veiacosValidation } from "../../../validations/veiacos-validation";
 export default function VeiacosForm() {
   const { id } = useParams();
   const { store } = useContext(AppContext);
+  const navigate = useNavigate();
   const [action, setAction] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const [veiacosInitialValues, setVeiacosInitialValues] = useState({
     name: "",
     phone: "",
@@ -28,6 +30,7 @@ export default function VeiacosForm() {
     }
 
     async function init() {
+      debugger;
       if (id) {
         setAction("edit");
 
@@ -43,12 +46,19 @@ export default function VeiacosForm() {
   }, [id]);
 
   async function handleSubmit(values) {
+    setLoading(true);
+
     if (action === "create") {
       await _veiacoService
         .createVeiaco(values)
-        .then((res) => {})
+        .then((res) => {
+          navigate(`/veiaco/${res.id}/dashboard`);
+        })
         .catch((err) => {
           setMessage(err?.response?.data?.message);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     } else {
       await _veiacoService
@@ -58,6 +68,9 @@ export default function VeiacosForm() {
         })
         .catch((err) => {
           setMessage(err?.response?.data?.message);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     }
   }
@@ -110,6 +123,7 @@ export default function VeiacosForm() {
                     className="main-button-1"
                     text={action === "create" ? "Criar" : "Salvar"}
                     type="Submit"
+                    loading={loading}
                   />
                 </div>
               </Form>

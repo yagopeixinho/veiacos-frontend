@@ -184,7 +184,6 @@ table {
 */
 .main-button-1 {
   width: 160px;
-  padding: 10px;
   border-radius: 50px;
   border: none;
   font-size: 26px;
@@ -192,11 +191,11 @@ table {
   background-color: #982881;
   color: #ffffff;
   cursor: pointer;
+  height: 50px;
 }
 
 .main-button-2 {
   width: 160px;
-  padding: 10px;
   border-radius: 50px;
   border: none;
   font-size: 26px;
@@ -204,11 +203,11 @@ table {
   background-color: #632678;
   color: #ffffff;
   cursor: pointer;
+  height: 50px;
 }
 
 .main-button-3 {
   width: 160px;
-  padding: 10px;
   border-radius: 50px;
   border: none;
   font-size: 26px;
@@ -216,6 +215,7 @@ table {
   background-color: #254589;
   color: #ffffff;
   cursor: pointer;
+  height: 50px;
 }
 
 /*
@@ -439,6 +439,17 @@ body {
 
 .veiacos-page {
   margin: 0 auto;
+}
+.veiacos-page .configs-table {
+  display: flex;
+  justify-content: space-between;
+}
+.veiacos-page .configs-table .headline-veiacos-table {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.875em;
+  line-height: 42px;
+  width: 60%;
+  margin: 0px auto 50px auto;
 }
 .veiacos-page .veiacos-table {
   text-align: left;

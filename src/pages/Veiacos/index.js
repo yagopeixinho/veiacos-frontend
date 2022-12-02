@@ -26,47 +26,53 @@ export default function Veiacos() {
   return (
     <div className="veiacos-page">
       <div className="container-app">
-        <table className="veiacos-table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Status</th>
-              <th>Data</th>
-              <th>Telefone</th>
-              <th className="actions-th">Ações</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {veiacosList.map((veiaco, index) => (
-              <tr key={index}>
-                <td>
-                  <span className="veiaco-picture" />
-                  <span>{veiaco.name}</span>
-                </td>
-                <td>Devendo</td>
-                <td>
-                  {new Date(veiaco.created_at).toLocaleDateString("pt-BR")}
-                </td>
-                <td>{veiaco.phone}</td>
-                <td className="actions-td">
-                  <span>
-                    <img
-                      src={pencilIcon}
-                      alt="Um ícone de lápis para editar um veiaco"
-                      onClick={() => {
-                        navigate(`/veiaco/${veiaco.id}`);
-                      }}
-                    />
-                    <img src={trashIcon} alt="" />
-                  </span>
-                </td>
+        <div className="table-content">
+          <div className="configs-table">
+            <div className="headline-veiacos-table">Todos os veiacos </div>
+            <div className="actions-veiacos-table"></div>
+          </div>
+          <table className="veiacos-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Status</th>
+                <th>Data</th>
+                <th>Telefone</th>
+                <th className="actions-th">Ações</th>
               </tr>
-            ))}
-          </tbody>
+            </thead>
 
-          <tfoot></tfoot>
-        </table>
+            <tbody>
+              {veiacosList.map((veiaco, index) => (
+                <tr key={index}>
+                  <td>
+                    <span className="veiaco-picture" />
+                    <span>{veiaco.name}</span>
+                  </td>
+                  <td>Devendo</td>
+                  <td>
+                    {new Date(veiaco.created_at).toLocaleDateString("pt-BR")}
+                  </td>
+                  <td>{veiaco.phone}</td>
+                  <td className="actions-td">
+                    <span>
+                      <img
+                        src={pencilIcon}
+                        alt="Um ícone de lápis para editar um veiaco"
+                        onClick={() => {
+                          navigate(`/veiaco/${veiaco.id}`);
+                        }}
+                      />
+                      <img src={trashIcon} alt="" />
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+
+            <tfoot></tfoot>
+          </table>
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { AppContext } from "../contexts/store";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Veiacos from "../pages/Veiacos";
+import VeiacoDashboard from "../pages/Veiacos/VeiacoDashboard";
 import VeiacosForm from "../pages/Veiacos/VeiacosForm";
 
 function PrivateRoute({ children, redirectTo }) {
@@ -56,11 +57,20 @@ export default function AppRoutes() {
       />
 
       <Route
+        path="/veiacos/adicionar"
+        element={
+          <PrivateRoute>
+            <VeiacosForm />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
         exact
         path="/veiaco/:id/dashboard"
         element={
-          <PrivateRoute redirectTo="/">
-            {/* <VeiacosDashboard /> */}
+          <PrivateRoute>
+            <VeiacoDashboard />
           </PrivateRoute>
         }
       />

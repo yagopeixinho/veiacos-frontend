@@ -16,8 +16,10 @@ export default function Login() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [action, setAction] = useState("login");
+  const [loading, setLoading] = useState(false);
 
   async function loginIn(values) {
+    setLoading(true);
     const _authenticationService = new AuthenticationService();
 
     await _authenticationService
@@ -28,10 +30,14 @@ export default function Login() {
       })
       .catch((err) => {
         setMessage(err?.response?.data?.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }
 
   async function registerUser(values) {
+    setLoading(true);
     const _userService = new UserService();
 
     await _userService
@@ -42,6 +48,9 @@ export default function Login() {
       })
       .catch((err) => {
         setMessage(err?.response?.data?.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }
 
@@ -84,6 +93,7 @@ export default function Login() {
                       className="main-button-1"
                       text="Acessar"
                       type="Submit"
+                      loading={loading}
                     />
                   </div>
 
