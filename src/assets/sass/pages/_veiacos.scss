@@ -1,75 +1,11 @@
 .veiacos-page {
   margin: 0 auto;
 
-  .configs-table {
-    display: flex;
-    justify-content: space-between;
-
-    .headline-veiacos-table {
-      @include headline-4-sans-serif;
-      width: 60%;
-      margin: 0px auto 50px auto;
-    }
-
-    .action-veiacos-table {
-    }
-  }
-
-  .veiacos-table {
-    text-align: left;
-
-    width: 60%;
-    background-color: $bg-light;
-    border-radius: 30px;
-    padding: 40px;
-    margin: 0 auto;
-
-    thead {
-      tr {
-        @include headline-6-sans-serif;
-        color: rgba(0, 0, 0, 0.26);
-
-        text-align: left;
-
-        .actions-th {
-          text-align: right;
-        }
-
-        td {
-        }
-      }
-    }
-
-    tbody {
-      tr {
-        @include body-normal-sans-serif;
-
-        .actions-td {
-          text-align: right;
-        }
-
-        td {
-          .veiaco-picture {
-            background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-right: 6px;
-          }
-
-          width: 240px;
-          font-size: 16px;
-          padding: 34px 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.062);
-          cursor: pointer;
-        }
-      }
-    }
-
-    tfoot {
-      tr {
-        td {
-        }
-      }
-    }
+  .grid-veiacos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
   }
 }
+

@@ -1,5 +1,10 @@
 body {
-  background-color: $bg-light;
+  background: linear-gradient(
+    315deg,
+    rgba(111, 38, 122, 1) 0%,
+    rgba(152, 40, 129, 1) 44%
+  );
+  height: 100vh;
 }
 
 .home {

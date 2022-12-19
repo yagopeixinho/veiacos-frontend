@@ -282,7 +282,7 @@ table {
   line-height: 20px;
 }
 .header .nav-link-active {
-  color: #982881;
+  color: #000000;
   font-size: 18px !important;
   text-decoration: none;
   font-family: "Fredoka", sans-serif;
@@ -304,6 +304,45 @@ table {
   height: 38px;
   border-radius: 50%;
   background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
+}
+
+.veiaco-card {
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.veiaco-card .veiaco-card-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px 4px 20px;
+}
+.veiaco-card .veiaco-card-container .veiaco-picture {
+  background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+}
+.veiaco-card .veiaco-card-container .veiaco-info h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.25em;
+  line-height: 28px;
+  color: #006db2;
+}
+.veiaco-card .veiaco-card-container .veiaco-info label {
+  font-family: "Fredoka", sans-serif;
+  font-size: 0.875em;
+  line-height: 20px;
+}
+.veiaco-card hr {
+  border: 1px solid rgba(236, 236, 236, 0.7411764706);
+}
+.veiaco-card .veiaco-actions {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0 0 10px 0;
 }
 
 /* ------------ Layout ------------ */
@@ -339,10 +378,6 @@ table {
   }
 }
 /* ------------ Pages ------------ */
-body {
-  background-color: #ffffff;
-}
-
 .container-login {
   display: flex;
   margin: 2.5%;
@@ -407,7 +442,8 @@ body {
 }
 
 body {
-  background-color: #ffffff;
+  background: linear-gradient(315deg, rgb(111, 38, 122) 0%, rgb(152, 40, 129) 44%);
+  height: 100vh;
 }
 
 .home {
@@ -440,56 +476,17 @@ body {
 .veiacos-page {
   margin: 0 auto;
 }
-.veiacos-page .configs-table {
-  display: flex;
-  justify-content: space-between;
+.veiacos-page .grid-veiacos {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
 }
-.veiacos-page .configs-table .headline-veiacos-table {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.875em;
-  line-height: 42px;
-  width: 60%;
-  margin: 0px auto 50px auto;
+
+body {
+  background-color: white;
 }
-.veiacos-page .veiacos-table {
-  text-align: left;
-  width: 60%;
-  background-color: #ffffff;
-  border-radius: 30px;
-  padding: 40px;
-  margin: 0 auto;
-}
-.veiacos-page .veiacos-table thead tr {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.25em;
-  line-height: 28px;
-  color: rgba(0, 0, 0, 0.26);
-  text-align: left;
-}
-.veiacos-page .veiacos-table thead tr .actions-th {
-  text-align: right;
-}
-.veiacos-page .veiacos-table tbody tr {
-  font-family: "Fredoka", sans-serif;
-  font-size: 1em;
-  line-height: 22px;
-}
-.veiacos-page .veiacos-table tbody tr .actions-td {
-  text-align: right;
-}
-.veiacos-page .veiacos-table tbody tr td {
-  width: 240px;
-  font-size: 16px;
-  padding: 34px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.062);
-  cursor: pointer;
-}
-.veiacos-page .veiacos-table tbody tr td .veiaco-picture {
-  background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
-  padding: 5px 15px;
-  border-radius: 20px;
-  margin-right: 6px;
-}
+
 .veiacos-form {
   display: flex;
 }

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AppContext } from "../contexts/store";
 
 import Home from "../pages/Home";
@@ -11,6 +11,13 @@ import VeiacosForm from "../pages/Veiacos/VeiacosForm";
 function PrivateRoute({ children, redirectTo }) {
   const { store } = useContext(AppContext);
   const { isAuthenticated } = store;
+  const { pathname } = useLocation();
+
+  if (pathname === "/veiacos") {
+    document.getElementById("body").style.background = "#982881";
+  } else {
+    document.getElementById("body").style.background = "white";
+  }
 
   return isAuthenticated ? children : <Navigate to={redirectTo} />;
 }

@@ -1,0 +1,42 @@
+.veiaco-card {
+  cursor: pointer;
+  background: $bg-light;
+  border-radius: 12px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+  .veiaco-card-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px 4px 20px;
+
+    .veiaco-picture {
+      background: url("https://yt3.ggpht.com/yti/AJo0G0klEzwyiGwEld2jXcDW-o_OiPLRT4pUZ5xj2uKysw=s88-c-k-c0x00ffffff-no-rj-mo");
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      background-repeat: no-repeat;
+    }
+
+    .veiaco-info {
+      h1 {
+        @include headline-6-sans-serif;
+        color: $color-4;
+      }
+
+      label {
+        @include label-normal-sans-serif;
+      }
+    }
+  }
+
+  hr {
+    border: 1px solid #ecececbd;
+  }
+
+  .veiaco-actions {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+}
