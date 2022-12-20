@@ -3,7 +3,7 @@ import userSeeIcon from "../assets/images/icons/see-user.svg";
 import deleteIcon from "../assets/images/icons/delete-icon.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function VeiacoCard({ veiaco }) {
+export default function VeiacoCard({ veiaco, setConfirmationDialog }) {
   const navigate = useNavigate();
 
   return (
@@ -39,6 +39,9 @@ export default function VeiacoCard({ veiaco }) {
           <img
             src={deleteIcon}
             alt="Ícone de deletar um veiaco. A imagem consiste na figura de uma lixeira."
+            onClick={() => {
+              setConfirmationDialog(true);
+            }}
           />
         </div>
       </div>

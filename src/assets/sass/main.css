@@ -345,6 +345,19 @@ table {
   padding: 0 0 10px 0;
 }
 
+.confirmationDialogModal {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.confirmationDialogModal .confirmationDialogContent {
+  display: flex;
+}
+
 /* ------------ Layout ------------ */
 @media (min-width: 1800px) {
   .container-app {

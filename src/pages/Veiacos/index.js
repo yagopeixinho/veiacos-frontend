@@ -5,11 +5,12 @@ import trashIcon from "../../assets/images/icons/delete-icon.svg";
 import pencilIcon from "../../assets/images/icons/edit-icon.svg";
 import { useNavigate } from "react-router-dom";
 import VeiacoCard from "../../components/VeiacoCard";
+import ConfirmationDialog from "../../components/modals/ConfirmationDialog";
 
 export default function Veiacos() {
   const { store } = useContext(AppContext);
   const [veiacosList, setVeiacosList] = useState([]);
-  const navigate = useNavigate();
+  const [confirmationDialog, setConfirmationDialog] = useState(false);
 
   useEffect(() => {
     async function init() {
@@ -25,14 +26,26 @@ export default function Veiacos() {
   }, [store]);
 
   return (
-    <div className="veiacos-page">
-      <div className="container-app">
-        <div className="grid-veiacos">
-          {veiacosList.map((veiaco, index) => (
-            <VeiacoCard veiaco={veiaco} key={index} />
-          ))}
+    <>
+      <ConfirmationDialog
+        visible={confirmationDialog}
+        message="Deseja excluir esse veiaco"
+        onConfirm={() => {}}
+      />
+
+      <div className="veiacos-page">
+        <div className="container-app">
+          <div className="grid-veiacos">
+            {veiacosList.map((veiaco, index) => (
+              <VeiacoCard
+                veiaco={veiaco}
+                key={index}
+                setConfirmationDialog={setConfirmationDialog}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
